@@ -23,5 +23,8 @@ public class GerarRelatorio {
         this.relatorio = relatorio;
         return this;
     }
-    
+
+    public Relatorio formato() {
+        return relatorio;
+    }
 }

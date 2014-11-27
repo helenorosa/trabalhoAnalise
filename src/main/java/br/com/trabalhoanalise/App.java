@@ -14,7 +14,10 @@ public class App
         GerarRelatorio getRelatorio = GerarRelatorio.criaRelatorioDefault();
         System.out.println(getRelatorio.gerarRelatorio(cache.getDados()));
         
-        getRelatorio.noFormato(new RelatorioXML());
+        GerarRelatorio getRelatorio2 = GerarRelatorio
+                            .criaRelatorioDefault()
+                            .noFormato(new RelatorioXML());
+        
         Cache outraTela = Cache.getInstance();
         outraTela.setDados("mais dados");
         System.out.println(getRelatorio.gerarRelatorio(outraTela.getDados()));
